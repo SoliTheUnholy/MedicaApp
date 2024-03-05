@@ -5,6 +5,7 @@ import Root from './routes/root';
 import ErrorPage from './pages/ErrorPage';
 import './index.css';
 import { ThemeProvider } from '@material-tailwind/react';
+import LoadingPage from './pages/LoadingPage';
 const HomePage = React.lazy(() => import('./pages/HomePage'));
 const Appointment = React.lazy(() => import('./pages/Appointment'));
 const History = React.lazy(() => import('./pages/History'));
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: (
-          <React.Suspense fallback={<h1>Loading...</h1>}>
+          <React.Suspense fallback={<LoadingPage />}>
             <HomePage />
           </React.Suspense>
         ),
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: '/Appointment',
         element: (
-          <React.Suspense fallback={<h1>Loading...</h1>}>
+          <React.Suspense fallback={<LoadingPage />}>
             <Appointment />
           </React.Suspense>
         ),
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: '/History',
         element: (
-          <React.Suspense fallback={<h1>Loading...</h1>}>
+          <React.Suspense fallback={<LoadingPage />}>
             <History />
           </React.Suspense>
         ),
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       {
         path: '/Articles',
         element: (
-          <React.Suspense fallback={<h1>Loading...</h1>}>
+          <React.Suspense fallback={<LoadingPage />}>
             <Articles />
           </React.Suspense>
         ),
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
       {
         path: '/Profile',
         element: (
-          <React.Suspense fallback={<h1>Loading...</h1>}>
+          <React.Suspense fallback={<LoadingPage />}>
             <Profile />
           </React.Suspense>
         ),
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
       {
         path: '/Login',
         element: (
-          <React.Suspense fallback={<h1>Loading...</h1>}>
+          <React.Suspense fallback={<LoadingPage />}>
             <LoginPage />
           </React.Suspense>
         ),
